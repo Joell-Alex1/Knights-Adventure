@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1x8a4i681she"]
+
+[ext_resource type="Texture2D" uid="uid://78orrepf356w" path="res://Assests/Free/Traps/Fire/fire.png" id="1_m24jc"]
+[ext_resource type="Script" path="res://trap/flame_trap.gd" id="2_06ldx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lw66o"]
+radius = 4.67856
+
+[sub_resource type="Animation" id="Animation_lynwd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_nxscl"]
+resource_name = "flicker"
+length = 0.375012
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 2, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0k4iv"]
+_data = {
+"RESET": SubResource("Animation_lynwd"),
+"flicker": SubResource("Animation_nxscl")
+}
+
+[node name="Flame_trap" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_m24jc")
+hframes = 3
+vframes = 3
+script = ExtResource("2_06ldx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_lw66o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0k4iv")
+}
+autoplay = "flicker"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

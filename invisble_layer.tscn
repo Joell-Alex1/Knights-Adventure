@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cobqog6gnldkn"]
+
+[ext_resource type="Texture2D" uid="uid://c8fd7lc0a20xh" path="res://Assests/brackeys_platformer_assets/sprites/world_tileset.png" id="1_n2dr7"]
+[ext_resource type="Script" path="res://Scripts/invisble_layer.gd" id="1_rtdly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x542q"]
+size = Vector2(12, 12)
+
+[sub_resource type="Animation" id="Animation_whjee"]
+resource_name = "Fadein"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5uuv7"]
+_data = {
+"Fadein": SubResource("Animation_whjee")
+}
+
+[node name="Invisble layer" type="StaticBody2D"]
+script = ExtResource("1_rtdly")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_n2dr7")
+region_enabled = true
+region_rect = Rect2(65, 17, 15, 14)
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_x542q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5uuv7")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

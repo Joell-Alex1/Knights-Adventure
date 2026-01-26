@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://da0dwjlpjpaxj"]
+
+[ext_resource type="AudioStream" uid="uid://bkrbmkbt32uvi" path="res://Assests/brackeys_platformer_assets/music/Sentinel-chosic.com_.mp3" id="1_mpdm1"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_mpdm1")
+autoplay = true
+max_distance = 1e+08

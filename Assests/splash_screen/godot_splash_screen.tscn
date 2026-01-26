@@ -1,0 +1,110 @@
+[gd_scene load_steps=17 format=3 uid="uid://cugsuosevqoq4"]
+
+[ext_resource type="Script" path="res://Assests/splash_screen/splashscreen.gd" id="1_f2ssh"]
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_fdad4"]
+[ext_resource type="Texture2D" uid="uid://cxn4w1ob5u031" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_000.png" id="3_vr7am"]
+[ext_resource type="Texture2D" uid="uid://dvvn5woapv0jg" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_001.png" id="4_46vq6"]
+[ext_resource type="Texture2D" uid="uid://d3e7bf3y07bnb" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_002.png" id="5_atgy5"]
+[ext_resource type="Texture2D" uid="uid://kg3oq3qrudr" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_003.png" id="6_6fxo5"]
+[ext_resource type="Texture2D" uid="uid://dxl1c0gvunm0d" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_004.png" id="7_b3psv"]
+[ext_resource type="Texture2D" uid="uid://xv8325oe2o1e" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_005.png" id="8_i0la6"]
+[ext_resource type="Texture2D" uid="uid://tn3nuiu6da2c" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_006.png" id="9_he32h"]
+[ext_resource type="Texture2D" uid="uid://bp3w3wjj306rq" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_007.png" id="10_6b8w6"]
+[ext_resource type="Texture2D" uid="uid://dcamkxgqm4sa6" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_008.png" id="11_d6sw3"]
+[ext_resource type="Texture2D" uid="uid://cc8eyd4xb4x7l" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__RUN_009.png" id="12_5m5hf"]
+
+[sub_resource type="Animation" id="Animation_71ju6"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_vj3d3"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_vr7am"), ExtResource("4_46vq6"), ExtResource("5_atgy5"), ExtResource("6_6fxo5"), ExtResource("7_b3psv"), ExtResource("8_i0la6"), ExtResource("9_he32h"), ExtResource("10_6b8w6"), ExtResource("11_d6sw3"), ExtResource("12_5m5hf"), ExtResource("4_46vq6"), ExtResource("3_vr7am"), ExtResource("5_atgy5"), ExtResource("6_6fxo5"), ExtResource("7_b3psv"), ExtResource("8_i0la6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6kul7"]
+_data = {
+"RESET": SubResource("Animation_71ju6"),
+"new_animation": SubResource("Animation_vj3d3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pospe"]
+
+[node name="GodotSplashScreen" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource("1_f2ssh")
+_time = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6kul7")
+}
+autoplay = "new_animation"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(430, 345)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_vr7am")
+
+[node name="Label2" type="Label" parent="Sprite2D"]
+offset_left = 485.714
+offset_top = 462.858
+offset_right = 1709.71
+offset_bottom = 526.858
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_fdad4")
+theme_override_font_sizes/font_size = 64
+text = "-Alex Studios Inc"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label3" type="Label" parent="Sprite2D"]
+offset_left = -1845.71
+offset_top = 465.714
+offset_right = -693.719
+offset_bottom = 529.714
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_fdad4")
+theme_override_font_sizes/font_size = 40
+text = "SKIP
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -1625.71
+offset_top = -517.143
+offset_right = -473.715
+offset_bottom = -485.143
+scale = Vector2(3, 3)
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_fdad4")
+theme_override_font_sizes/font_size = 32
+text = "   Knight's Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(621, 281)
+scale = Vector2(80, 50)
+shape = SubResource("RectangleShape2D_pospe")
+action = "ui_skip"

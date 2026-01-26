@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ufd6ne60h7cu"
+path="res://.godot/imported/Bipedal Mech.ogg-f25cbd79d88fdec2ee87a24d146c74ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assests/Magic-Cliffs-Gamekit/Sideview Sci-Fi - Patreon Collection/Music/music bipedal mech/Bipedal Mech.ogg"
+dest_files=["res://.godot/imported/Bipedal Mech.ogg-f25cbd79d88fdec2ee87a24d146c74ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

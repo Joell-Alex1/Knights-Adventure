@@ -1,0 +1,7 @@
+extends CanvasLayer
+
+func _ready():
+	GameM.gained_coins.connect(update_coin_display)
+
+func update_coin_display(gained_coins):
+	$CoinDisplay.text = str(GameM.coins)

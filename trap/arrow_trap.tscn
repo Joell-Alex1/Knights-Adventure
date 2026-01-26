@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccu3ye68ues67"]
+
+[ext_resource type="Texture2D" uid="uid://43ht44hmhxqj" path="res://Assests/Free/Traps/Arrow/Png/Small/Arrow3.png" id="1_0se2k"]
+[ext_resource type="Script" path="res://trap/arrow_trap.gd" id="1_oyywc"]
+[ext_resource type="Texture2D" uid="uid://vqdvuqevk2yd" path="res://Assests/Free/Traps/Arrow/Png/Small/Bow4.png" id="2_xlwow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kg8wj"]
+size = Vector2(11, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmf73"]
+size = Vector2(29, 151)
+
+[node name="ArrowTrap" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_oyywc")
+
+[node name="Arrow" type="Area2D" parent="."]
+position = Vector2(208, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arrow"]
+texture_filter = 1
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0se2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+position = Vector2(-12, -0.5)
+shape = SubResource("RectangleShape2D_kg8wj")
+
+[node name="SpawnPoint" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(192, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xlwow")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(-6, -0.999999)
+
+[node name="ArrowEnd" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowEnd"]
+position = Vector2(-334.5, 1.5)
+shape = SubResource("RectangleShape2D_gmf73")
+
+[connection signal="area_entered" from="Arrow" to="." method="_on_arrow_area_entered"]
+[connection signal="area_entered" from="ArrowEnd" to="." method="_on_arrow_end_area_entered"]

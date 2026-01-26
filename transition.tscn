@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq8tjy5is0lkc"]
+
+[ext_resource type="Script" path="res://transition.gd" id="1_glugg"]
+
+[sub_resource type="Animation" id="Animation_bj4e2"]
+resource_name = "Fade_To_Black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.980392)]
+}
+
+[sub_resource type="Animation" id="Animation_1jas2"]
+resource_name = "Fade_To_Normal"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.980392), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6fa30"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytfwb"]
+_data = {
+"Fade_To_Black": SubResource("Animation_bj4e2"),
+"Fade_To_Normal": SubResource("Animation_1jas2"),
+"RESET": SubResource("Animation_6fa30")
+}
+
+[node name="Transition" type="Node2D"]
+script = ExtResource("1_glugg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = -1218.0
+offset_top = -820.0
+offset_right = 2349.0
+offset_bottom = 977.0
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ytfwb")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

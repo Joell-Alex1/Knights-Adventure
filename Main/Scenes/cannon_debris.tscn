@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://r48jujrr0r4p"]
+
+[ext_resource type="Texture2D" uid="uid://clql8ypknkftq" path="res://Assests/Cannon/02.png" id="1_72fl2"]
+[ext_resource type="Texture2D" uid="uid://cwb4q0scmdkgk" path="res://Assests/Cannon/explo2.png" id="2_1ojqh"]
+[ext_resource type="Texture2D" uid="uid://cnlfdhxn3caff" path="res://Assests/Cannon/Expl.png" id="3_ql3af"]
+[ext_resource type="Texture2D" uid="uid://by5l1el5rscf3" path="res://Assests/Cannon/15.png" id="4_0lr2g"]
+
+[sub_resource type="Animation" id="Animation_ekjsd"]
+resource_name = "Break"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_72fl2"), ExtResource("1_72fl2"), ExtResource("2_1ojqh"), ExtResource("2_1ojqh"), ExtResource("2_1ojqh"), ExtResource("2_1ojqh"), ExtResource("3_ql3af"), ExtResource("3_ql3af"), ExtResource("4_0lr2g")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.62939e-06, -1.90735e-06), Vector2(0, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_x6ii4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_72fl2")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_voepy"]
+_data = {
+"Break": SubResource("Animation_ekjsd"),
+"RESET": SubResource("Animation_x6ii4")
+}
+
+[node name="Cannon Debris" type="Node2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(0.521, 0.5)
+texture = ExtResource("1_72fl2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_voepy")
+}

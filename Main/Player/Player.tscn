@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://5c4wdfm5j3fo"]
+
+[ext_resource type="Script" path="res://Main/Player/Player.gd" id="1_hn11c"]
+[ext_resource type="Texture2D" uid="uid://3tsos6rirvd" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__ATTACK_000.png" id="3_timc3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vtky"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f2ne"]
+size = Vector2(10, 26)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_foodd"]
+radius = 6.08276
+
+[node name="Player" type="CharacterBody2D"]
+process_mode = 1
+z_index = 5
+position = Vector2(3, 0)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_hn11c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-4, 3)
+scale = Vector2(0.048, 0.048)
+texture = ExtResource("3_timc3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 2)
+shape = SubResource("CapsuleShape2D_2vtky")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2, 0)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, -1)
+shape = SubResource("RectangleShape2D_0f2ne")
+
+[node name="AttackArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(11, 2)
+shape = SubResource("CircleShape2D_foodd")

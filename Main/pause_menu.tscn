@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqx0aylu3euqb"]
+
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="1_f66mv"]
+[ext_resource type="Script" path="res://Main/pause_menu.gd" id="1_y5mwb"]
+[ext_resource type="Texture2D" uid="uid://cwhk866rrpary" path="res://Main/BACK.tres" id="2_dtgqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuqag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jate"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8kgj"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y5mwb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -181.0
+offset_right = 279.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("2_dtgqw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.848425, 0.293273, 0.827509, 1)
+theme_override_fonts/font = ExtResource("1_f66mv")
+theme_override_font_sizes/font_size = 16
+text = "RESUME
+"
+
+[node name="resume" type="TouchScreenButton" parent="PanelContainer/VBoxContainer"]
+position = Vector2(269, 107)
+scale = Vector2(9.3, 1)
+shape = SubResource("RectangleShape2D_nuqag")
+
+[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.183203, 0.414189, 1, 1)
+theme_override_fonts/font = ExtResource("1_f66mv")
+text = "RESTART"
+
+[node name="restart" type="TouchScreenButton" parent="PanelContainer/VBoxContainer"]
+position = Vector2(269, 172)
+scale = Vector2(9.3, 1)
+shape = SubResource("RectangleShape2D_5jate")
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_f66mv")
+text = "QUIT"
+
+[node name="quit" type="TouchScreenButton" parent="PanelContainer/VBoxContainer"]
+position = Vector2(267, 239)
+scale = Vector2(9.3, 1)
+shape = SubResource("RectangleShape2D_i8kgj")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

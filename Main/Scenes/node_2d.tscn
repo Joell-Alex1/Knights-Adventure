@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://criu77qm2oc7f"]
+
+[ext_resource type="PackedScene" uid="uid://d3v2irh1ssaoe" path="res://Levels/Level_0.tscn" id="1_83ouc"]
+[ext_resource type="PackedScene" uid="uid://bqx0aylu3euqb" path="res://Main/pause_menu.tscn" id="1_a2ref"]
+
+[sub_resource type="GDScript" id="GDScript_cy886"]
+
+[node name="GameManager" type="Node2D"]
+process_mode = 3
+script = SubResource("GDScript_cy886")
+
+[node name="PauseMenuScreen" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseMenuScreen" instance=ExtResource("1_a2ref")]
+
+[node name="Level_0" parent="." instance=ExtResource("1_83ouc")]

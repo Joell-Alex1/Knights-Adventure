@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcikbivd7ux1i"]
+
+[ext_resource type="Script" path="res://portal.gd" id="1_iwk65"]
+[ext_resource type="Texture2D" uid="uid://dfq8bda2kay4l" path="res://Assests/Pipoya VFX WarpPortal/Green Portal Sprite Sheet.png" id="1_y5lxr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ngs6d"]
+height = 72.0
+
+[sub_resource type="Animation" id="Animation_f3inn"]
+resource_name = "On"
+length = 0.80001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenPortalSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_umtpp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenPortalSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fp07s"]
+_data = {
+"On": SubResource("Animation_f3inn"),
+"RESET": SubResource("Animation_umtpp")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7n5s5"]
+radius = 12.5
+height = 52.0
+
+[node name="Portal" type="Node2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_iwk65")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(316, 147.5)
+shape = SubResource("CapsuleShape2D_ngs6d")
+
+[node name="GreenPortalSpriteSheet" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(328, 145)
+scale = Vector2(1.8, 1.5)
+texture = ExtResource("1_y5lxr")
+hframes = 8
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fp07s")
+}
+autoplay = "On"
+
+[node name="StartGame" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartGame"]
+position = Vector2(327, 150)
+shape = SubResource("CapsuleShape2D_7n5s5")
+
+[connection signal="area_entered" from="StartGame" to="." method="_on_start_game_area_entered"]

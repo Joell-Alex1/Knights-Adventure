@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://crfl2ow4ei8xv"]
+
+[ext_resource type="Script" path="res://Assests/splash_screen/splash_screen_manager.gd" id="1_b7y3h"]
+[ext_resource type="PackedScene" uid="uid://cugsuosevqoq4" path="res://Assests/splash_screen/godot_splash_screen.tscn" id="1_q85rk"]
+[ext_resource type="PackedScene" uid="uid://bmc8nn3dk62ec" path="res://Assests/splash_screen/ControllerSplashScreen.tscn" id="2_bqo6t"]
+[ext_resource type="PackedScene" uid="uid://7su6juomwyyv" path="res://main_menu.tscn" id="2_h70m0"]
+
+[node name="SplashScreenManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7y3h")
+_move_to = ExtResource("2_h70m0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GodotSplashScreen" parent="." instance=ExtResource("1_q85rk")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 168.0
+offset_top = 12.0
+offset_right = 1344.0
+offset_bottom = 656.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ControllerSplashScreen" parent="." instance=ExtResource("2_bqo6t")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -4.0
+offset_right = 1161.0
+offset_bottom = 641.0

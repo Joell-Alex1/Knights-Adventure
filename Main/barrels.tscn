@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgjmn30ad8pvy"]
+
+[ext_resource type="Texture2D" uid="uid://d0tgfw7sbc0he" path="res://Assests/Destructible items/Chest 3.png" id="1_o27cc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyjch"]
+size = Vector2(20, 23)
+
+[node name="Barrels" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -3.5)
+shape = SubResource("RectangleShape2D_cyjch")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4, 0)
+texture = ExtResource("1_o27cc")

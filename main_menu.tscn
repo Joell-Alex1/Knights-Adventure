@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=3 uid="uid://7su6juomwyyv"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_k2nvk"]
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_ewsai"]
+[ext_resource type="Texture2D" uid="uid://ooj6d32sywvd" path="res://Assests/Main.jpeg" id="2_gx1xo"]
+[ext_resource type="Texture2D" uid="uid://tr3o8ak4jj77" path="res://Assests/Free/Menu/Buttons/Play.png" id="3_7kdwb"]
+[ext_resource type="Texture2D" uid="uid://dk2pqfsqn60k6" path="res://Assests/Free/Menu/Buttons/Close.png" id="4_iyqe4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykoqr"]
+
+[node name="Main Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.091, 1.091)
+script = ExtResource("1_k2nvk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -7.0
+offset_right = 205.0
+offset_bottom = 673.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.5)
+texture = ExtResource("2_gx1xo")
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 268.561
+offset_top = 117.324
+offset_right = 765.56
+offset_bottom = 162.324
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.138213, 0.229665, 0.24795, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_ewsai")
+theme_override_font_sizes/font_size = 32
+text = "Knight Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 422.082
+offset_top = 274.0
+offset_right = 611.082
+offset_bottom = 315.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.415686, 0.588235, 0.772549, 1)
+theme_override_colors/font_pressed_color = Color(0.466667, 0, 0.607843, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.361524, 0.559443, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.780568, 0.852377, 0.986495, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.384314, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ewsai")
+text = " PLAY GAME
+"
+icon = ExtResource("3_7kdwb")
+
+[node name="ExitButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 441.414
+offset_top = 383.0
+offset_right = 632.414
+offset_bottom = 422.0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_color = Color(0.971501, 0.299456, 0.263485, 1)
+theme_override_colors/font_outline_color = Color(0.756863, 0.262745, 0.886275, 1)
+theme_override_fonts/font = ExtResource("2_ewsai")
+text = "EXIT GAME"
+icon = ExtResource("4_iyqe4")
+
+[node name="PlayGame" type="TouchScreenButton" parent="."]
+position = Vector2(612.165, 312.417)
+scale = Vector2(19.3, 4)
+shape = SubResource("RectangleShape2D_ykoqr")
+
+[node name="ExitGame" type="TouchScreenButton" parent="."]
+position = Vector2(615.032, 417.049)
+scale = Vector2(19.3, 4)
+shape = SubResource("RectangleShape2D_ykoqr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -4.0
+offset_right = 1221.0
+offset_bottom = 653.0
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_exit_game_pressed"]

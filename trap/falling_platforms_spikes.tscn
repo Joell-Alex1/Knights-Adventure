@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwqdeyh0nqrd"]
+
+[ext_resource type="Script" path="res://falling_platforms_spikes.gd" id="1_8ia00"]
+[ext_resource type="Texture2D" uid="uid://bid8esc78kone" path="res://Assests/Free/Traps/Falling Platforms/Off.png" id="1_tj0uh"]
+[ext_resource type="PackedScene" uid="uid://crexaf0srbudx" path="res://trap/spikes_2.tscn" id="3_jtwh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2jfl"]
+size = Vector2(31, 9)
+
+[node name="falling_platforms_spikes" type="RigidBody2D"]
+texture_filter = 1
+gravity_scale = 0.4
+lock_rotation = true
+freeze = true
+script = ExtResource("1_8ia00")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tj0uh")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Spikes2" parent="." instance=ExtResource("3_jtwh5")]
+position = Vector2(-6, -12)
+
+[node name="Spikes3" parent="." instance=ExtResource("3_jtwh5")]
+position = Vector2(7, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_r2jfl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

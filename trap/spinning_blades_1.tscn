@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://bvcfll0iquaq0"]
+
+[ext_resource type="Texture2D" uid="uid://b60dsyt0b8tj8" path="res://Assests/Free/Traps/Saw/On (38x38).png" id="1_p8cjp"]
+[ext_resource type="Script" path="res://trap/spinning_blades.gd" id="1_wbxh2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qskqp"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5goq"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75r41"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53xy8"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unejd"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0mbf"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8lee"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhntt"]
+atlas = ExtResource("1_p8cjp")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxm1n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qskqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5goq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75r41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53xy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unejd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0mbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8lee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhntt")
+}],
+"loop": true,
+"name": &"Spin",
+"speed": 40.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_01roo"]
+radius = 15.0333
+
+[node name="Spinning_Blades_1" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_wbxh2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qxm1n")
+animation = &"Spin"
+frame_progress = 0.990876
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_01roo")
+
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3ktvhtn7y55g"]
+
+[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="1_qlp4n"]
+[ext_resource type="Texture2D" uid="uid://grsnu8j6q8nk" path="res://Assests/Tree (2)/Final/Salt.png" id="2_ogibu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt2a4"]
+size = Vector2(50.625, 99)
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_qlp4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -26)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ogibu")
+region_enabled = true
+region_rect = Rect2(0, 0, 112, 177)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(-1, -18.5)
+shape = SubResource("RectangleShape2D_rt2a4")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

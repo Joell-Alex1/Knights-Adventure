@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://blcn8m1jky1le"]
+
+[ext_resource type="Script" path="res://Scripts/healthup.gd" id="1_xay68"]
+[ext_resource type="Texture2D" uid="uid://das16yjitdmin" path="res://Assests/heart pixel art/heart pixel art 16x16.png" id="2_wemhh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjisx"]
+radius = 7.28011
+
+[node name="Healthup" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_xay68")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_wemhh")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_cjisx")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

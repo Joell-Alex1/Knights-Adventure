@@ -1,0 +1,186 @@
+[gd_scene load_steps=18 format=3 uid="uid://mr8kbeedcxyq"]
+
+[ext_resource type="Texture2D" uid="uid://cwb4q0scmdkgk" path="res://Assests/Cannon/explo2.png" id="1_eekt7"]
+[ext_resource type="Script" path="res://trap/canon_1.gd" id="1_gdhhl"]
+[ext_resource type="Texture2D" uid="uid://blxlkbncwgabw" path="res://Assests/Cannon/06.png" id="2_13p7t"]
+[ext_resource type="PackedScene" uid="uid://b5ijw4lyp8emc" path="res://Main/Scenes/health_bar.tscn" id="5_3b4pm"]
+[ext_resource type="Texture2D" uid="uid://duphn7ougc2ik" path="res://explosion tutorial files/explosion.png" id="5_xkvgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2m5va"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvdlk"]
+size = Vector2(189, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olhby"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6n7s"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdaki"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k76x"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ogdg"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp26n"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drk16"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxjtj"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkqma"]
+atlas = ExtResource("5_xkvgy")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_287xi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olhby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6n7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdaki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k76x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ogdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp26n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drk16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxjtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkqma")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 8.0
+}]
+
+[node name="Canon1" type="Node2D" groups=["Enemies"]]
+script = ExtResource("1_gdhhl")
+
+[node name="Canon" type="Area2D" parent="."]
+z_index = 3
+texture_filter = 1
+position = Vector2(-1, 12)
+scale = Vector2(1.5, 1.5)
+
+[node name="Explo2" type="Sprite2D" parent="Canon"]
+position = Vector2(0, -1)
+texture = ExtResource("1_eekt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canon"]
+shape = SubResource("CircleShape2D_2m5va")
+
+[node name="Canon2" type="Area2D" parent="."]
+z_index = 3
+texture_filter = 1
+position = Vector2(41, 55)
+scale = Vector2(1.5, 1.5)
+
+[node name="Explo2" type="Sprite2D" parent="Canon2"]
+position = Vector2(0, -1)
+texture = ExtResource("1_eekt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canon2"]
+shape = SubResource("CircleShape2D_2m5va")
+
+[node name="Canon3" type="Area2D" parent="."]
+z_index = 3
+texture_filter = 1
+position = Vector2(-44, 55)
+scale = Vector2(1.5, 1.5)
+
+[node name="Explo2" type="Sprite2D" parent="Canon3"]
+position = Vector2(0, -1)
+texture = ExtResource("1_eekt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canon3"]
+shape = SubResource("CircleShape2D_2m5va")
+
+[node name="SpawnPoint" type="Sprite2D" parent="."]
+position = Vector2(-1, 47)
+texture = ExtResource("2_13p7t")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(0, -33)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(43, 7)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPoint"]
+position = Vector2(-42, 7)
+
+[node name="CanonEnd" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanonEnd"]
+position = Vector2(1, -812)
+shape = SubResource("RectangleShape2D_xvdlk")
+
+[node name="CanonEnd2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanonEnd2"]
+position = Vector2(812, 34)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_xvdlk")
+
+[node name="CanonEnd3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanonEnd3"]
+position = Vector2(-816, 22)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_xvdlk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-16, 7, 3, 5, 9, 13, 17, 43, 38, 41, 42, 64, 20, 64, 21, 76, -20, 75, -21, 67, -43, 66, -53, 45, -44, 42, -23, 41, -18, 36)
+
+[node name="HealthBar" parent="." instance=ExtResource("5_3b4pm")]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 39.0
+offset_bottom = 39.0
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 48)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_287xi")
+animation = &"dead"
+frame = 8
+frame_progress = 1.0
+
+[connection signal="area_entered" from="Canon" to="." method="_on_canon_area_entered"]
+[connection signal="area_entered" from="Canon2" to="." method="_on_canon_2_area_entered"]
+[connection signal="area_entered" from="Canon3" to="." method="_on_canon_3_area_entered"]
+[connection signal="area_entered" from="CanonEnd" to="." method="_on_canon_end_area_entered"]
+[connection signal="area_entered" from="CanonEnd2" to="." method="_on_canon_end_2_area_entered"]
+[connection signal="area_entered" from="CanonEnd3" to="." method="_on_canon_end_3_area_entered"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyto15y5juvwe"]
+
+[ext_resource type="PackedScene" uid="uid://d1x8a4i681she" path="res://trap/flame_trap.tscn" id="1_2idxs"]
+[ext_resource type="Script" path="res://trap/spinning_flame_trap.gd" id="1_5mvh2"]
+
+[node name="Spinning_flame_trap" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_5mvh2")
+
+[node name="Flame_trap" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Flame_trap2" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Flame_trap4" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Flame_trap5" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Flame_trap6" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Flame_trap7" parent="." instance=ExtResource("1_2idxs")]
+
+[node name="Rotation_Points" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="Marker2D" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(0, 50)
+
+[node name="Marker2D2" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(0, -50)
+
+[node name="Marker2D4" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(-50, 0)
+
+[node name="Marker2D5" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(36, 38)
+
+[node name="Marker2D6" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(-36, 38)
+
+[node name="Marker2D7" type="Marker2D" parent="Rotation_Points"]
+position = Vector2(-36, -38)

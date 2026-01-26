@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmc8nn3dk62ec"]
+
+[ext_resource type="Script" path="res://Assests/splash_screen/splashscreen.gd" id="1_hxf0a"]
+[ext_resource type="Texture2D" uid="uid://ryl7ld40y38w" path="res://Assests/FREE-Knight 2D Pixel Art/MainKnight/2_KNIGHT/Knight_02__ATTACK_002.png" id="2_paear"]
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_5mv84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4d3r"]
+
+[node name="ControllerSplashScreen" type="VBoxContainer"]
+offset_right = 1149.0
+offset_bottom = 645.0
+script = ExtResource("1_hxf0a")
+
+[node name="Knight02Attack002" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(597, 317)
+scale = Vector2(0.639444, 0.645)
+texture = ExtResource("2_paear")
+
+[node name="Label" type="Label" parent="Knight02Attack002"]
+offset_left = -462.446
+offset_top = 310.0
+offset_right = -182.446
+offset_bottom = 326.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("3_5mv84")
+theme_override_font_sizes/font_size = 16
+text = "Welcome Knight ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(621, 281)
+scale = Vector2(80, 50)
+shape = SubResource("RectangleShape2D_p4d3r")
+action = "ui_skip"

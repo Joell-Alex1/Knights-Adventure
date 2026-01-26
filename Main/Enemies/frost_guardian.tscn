@@ -1,0 +1,347 @@
+[gd_scene load_steps=74 format=3 uid="uid://bcfcccglmtvk7"]
+
+[ext_resource type="Texture2D" uid="uid://bcejult45emg6" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_7.png" id="1_d1hsy"]
+[ext_resource type="Texture2D" uid="uid://24uqp2rl3slo" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_6.png" id="1_eli8x"]
+[ext_resource type="Script" path="res://Main/Enemies/frost_guardian.gd" id="1_jopk5"]
+[ext_resource type="Texture2D" uid="uid://bbd5rv1kkt31w" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_16.png" id="1_uhvtf"]
+[ext_resource type="Texture2D" uid="uid://dr121kjpn74wq" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_1.png" id="2_63wsi"]
+[ext_resource type="Texture2D" uid="uid://bi38p5wej83l5" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_2.png" id="3_mhfn6"]
+[ext_resource type="Texture2D" uid="uid://ck5npxmftpco7" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_3.png" id="4_2g30c"]
+[ext_resource type="Texture2D" uid="uid://bv1nrcgv8imbu" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_4.png" id="5_7ujyt"]
+[ext_resource type="Texture2D" uid="uid://5jectbbkh1pq" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_5.png" id="6_iop2h"]
+[ext_resource type="Texture2D" uid="uid://bioc6ksklvdh3" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_7.png" id="7_jcyae"]
+[ext_resource type="Texture2D" uid="uid://b4b1fobojevm7" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_8.png" id="8_ywj4w"]
+[ext_resource type="Texture2D" uid="uid://cmmbwyanov02" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_9.png" id="9_1rt0u"]
+[ext_resource type="Texture2D" uid="uid://iw34vseuxrm5" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_10.png" id="10_n73x3"]
+[ext_resource type="Texture2D" uid="uid://bymb13irvytb6" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_1.png" id="11_muolo"]
+[ext_resource type="Texture2D" uid="uid://bhtx3gse8k6ju" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_2.png" id="12_86mqc"]
+[ext_resource type="Texture2D" uid="uid://bb3e5jy2ao8fr" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_3.png" id="13_jg0le"]
+[ext_resource type="Texture2D" uid="uid://wy2asivuos82" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_4.png" id="14_op8ti"]
+[ext_resource type="Texture2D" uid="uid://bfmni6veb7y16" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_5.png" id="15_mrs43"]
+[ext_resource type="Texture2D" uid="uid://cspv0eyr0dktk" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/idle/idle_6.png" id="16_cxxa8"]
+[ext_resource type="Texture2D" uid="uid://cd76ae0iwkq35" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_1.png" id="18_33sfc"]
+[ext_resource type="Texture2D" uid="uid://drco1rgwkkc4e" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_2.png" id="19_nkkya"]
+[ext_resource type="Texture2D" uid="uid://c41vpu6fn1kg8" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_3.png" id="20_higw8"]
+[ext_resource type="Texture2D" uid="uid://cqy3ulld5g17" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_4.png" id="21_v8nnq"]
+[ext_resource type="Texture2D" uid="uid://cm22oruklhop4" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_5.png" id="22_ufjes"]
+[ext_resource type="Texture2D" uid="uid://sos0ulbdq8n6" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_6.png" id="23_myjyk"]
+[ext_resource type="Texture2D" uid="uid://cns60yw364n1q" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_7.png" id="24_ie032"]
+[ext_resource type="Texture2D" uid="uid://bp60nxhudx0so" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_8.png" id="25_l23b8"]
+[ext_resource type="Texture2D" uid="uid://b38t4xhy4nwwf" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_9.png" id="26_d6s8b"]
+[ext_resource type="Texture2D" uid="uid://dromda8pw2pk3" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_10.png" id="27_ykkj6"]
+[ext_resource type="Texture2D" uid="uid://g2mkaayfxoyg" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_11.png" id="28_ie3e5"]
+[ext_resource type="Texture2D" uid="uid://d1mhhw6de62ou" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_12.png" id="29_ur2uo"]
+[ext_resource type="Texture2D" uid="uid://bl61k5r5flhot" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_13.png" id="30_susip"]
+[ext_resource type="Texture2D" uid="uid://ceif8dc7ml812" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_14.png" id="31_f7jxq"]
+[ext_resource type="Texture2D" uid="uid://cfb0pexg8ne8t" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/death/death_15.png" id="32_bsibw"]
+[ext_resource type="Texture2D" uid="uid://buy8s7nk7r4uq" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_1.png" id="34_yiiuj"]
+[ext_resource type="Texture2D" uid="uid://c36ih5hj06tgt" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_2.png" id="35_hkutl"]
+[ext_resource type="Texture2D" uid="uid://bjnx25gq07ufo" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_3.png" id="36_t5wce"]
+[ext_resource type="Texture2D" uid="uid://bsnld0x7tal5m" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_4.png" id="37_aepnl"]
+[ext_resource type="Texture2D" uid="uid://42yf0sln0xoq" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_5.png" id="38_vgnhr"]
+[ext_resource type="Texture2D" uid="uid://d0txnuex7nhcs" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_6.png" id="39_u5s3x"]
+[ext_resource type="Texture2D" uid="uid://cbh74xrrvb1we" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_7.png" id="40_inilm"]
+[ext_resource type="Texture2D" uid="uid://d1aap0tkv3tmb" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_8.png" id="41_7m67e"]
+[ext_resource type="Texture2D" uid="uid://bd1m8cnyjxp7e" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_9.png" id="42_yolxi"]
+[ext_resource type="Texture2D" uid="uid://ji7qglavhmrs" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/walk/walk_10.png" id="43_k5ttw"]
+[ext_resource type="Texture2D" uid="uid://ch5w06sduyxdd" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_1.png" id="44_xioq3"]
+[ext_resource type="Texture2D" uid="uid://df1qbmugp0oj8" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_2.png" id="45_vcae6"]
+[ext_resource type="Texture2D" uid="uid://wcrgtske3jrg" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_3.png" id="46_d4yhw"]
+[ext_resource type="Texture2D" uid="uid://cwvoykodw34u5" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_4.png" id="47_biarw"]
+[ext_resource type="Texture2D" uid="uid://hj7278y70ftv" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_5.png" id="48_qg4gj"]
+[ext_resource type="Texture2D" uid="uid://djcpwixitj7l1" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/take_hit/take_hit_6.png" id="49_rfad0"]
+[ext_resource type="Script" path="res://1FiniteStateMachine.gd" id="50_d1aeo"]
+[ext_resource type="Script" path="res://Main/Enemies/Idle1.gd" id="51_bdxfc"]
+[ext_resource type="Script" path="res://Main/Enemies/Follow1.gd" id="52_76gfd"]
+[ext_resource type="Script" path="res://Main/Enemies/MeleeAttack1.gd" id="53_o2ibq"]
+[ext_resource type="PackedScene" uid="uid://b5ijw4lyp8emc" path="res://Main/Scenes/health_bar.tscn" id="56_8olxd"]
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="57_0eoe6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shxgq"]
+size = Vector2(190.5, 216)
+
+[sub_resource type="Animation" id="Animation_q8via"]
+resource_name = "On"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-57.75, 2), Vector2(-57.75, -278)]
+}
+
+[sub_resource type="Animation" id="Animation_dxwlo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-57.75, -278)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmiy2"]
+_data = {
+"On": SubResource("Animation_q8via"),
+"RESET": SubResource("Animation_dxwlo")
+}
+
+[sub_resource type="Animation" id="Animation_kl15d"]
+resource_name = "On"
+length = 1.00001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(136, 18), Vector2(136, -238)]
+}
+
+[sub_resource type="Animation" id="Animation_7msyy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(136, -238)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38tum"]
+_data = {
+"On": SubResource("Animation_kl15d"),
+"RESET": SubResource("Animation_7msyy")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5sjm"]
+radius = 153.444
+
+[sub_resource type="Animation" id="Animation_coiij"]
+resource_name = "Hurt"
+length = 0.60001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("44_xioq3"), ExtResource("45_vcae6"), ExtResource("46_d4yhw"), ExtResource("47_biarw"), ExtResource("48_qg4gj"), ExtResource("49_rfad0"), ExtResource("1_d1hsy")]
+}
+
+[sub_resource type="Animation" id="Animation_hajp4"]
+resource_name = "Idle"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_muolo"), ExtResource("12_86mqc"), ExtResource("13_jg0le"), ExtResource("14_op8ti"), ExtResource("15_mrs43"), ExtResource("16_cxxa8"), ExtResource("11_muolo")]
+}
+
+[sub_resource type="Animation" id="Animation_dmglw"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_r5cfs"]
+resource_name = "death"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_33sfc"), ExtResource("19_nkkya"), ExtResource("20_higw8"), ExtResource("21_v8nnq"), ExtResource("22_ufjes"), ExtResource("23_myjyk"), ExtResource("24_ie032"), ExtResource("25_l23b8"), ExtResource("26_d6s8b"), ExtResource("27_ykkj6"), ExtResource("28_ie3e5"), ExtResource("29_ur2uo"), ExtResource("30_susip"), ExtResource("31_f7jxq"), ExtResource("32_bsibw"), ExtResource("1_uhvtf")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"die"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_r883n"]
+resource_name = "melee_attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_63wsi"), ExtResource("3_mhfn6"), ExtResource("4_2g30c"), ExtResource("5_7ujyt"), ExtResource("6_iop2h"), ExtResource("1_eli8x"), ExtResource("7_jcyae"), ExtResource("8_ywj4w"), ExtResource("9_1rt0u"), ExtResource("10_n73x3"), ExtResource("2_63wsi")]
+}
+
+[sub_resource type="Animation" id="Animation_r5qu4"]
+resource_name = "running"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("34_yiiuj"), ExtResource("35_hkutl"), ExtResource("36_t5wce"), ExtResource("37_aepnl"), ExtResource("38_vgnhr"), ExtResource("39_u5s3x"), ExtResource("40_inilm"), ExtResource("41_7m67e"), ExtResource("42_yolxi"), ExtResource("43_k5ttw")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w77cq"]
+_data = {
+"Hurt": SubResource("Animation_coiij"),
+"Idle": SubResource("Animation_hajp4"),
+"RESET": SubResource("Animation_dmglw"),
+"death": SubResource("Animation_r5cfs"),
+"melee_attack": SubResource("Animation_r883n"),
+"running": SubResource("Animation_r5qu4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u3ntg"]
+radius = 80.3057
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q078"]
+size = Vector2(197.5, 139.25)
+
+[node name="Frost Guardian" type="CharacterBody2D" groups=["Enemies"]]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_jopk5")
+
+[node name="Attacking" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attacking"]
+position = Vector2(-57.75, -278)
+shape = SubResource("RectangleShape2D_shxgq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Attacking/CollisionShape2D"]
+libraries = {
+"": SubResource("AnimationLibrary_qmiy2")
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attacking"]
+position = Vector2(136, -238)
+shape = SubResource("RectangleShape2D_shxgq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Attacking/CollisionShape2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_38tum")
+}
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(32, -6)
+shape = SubResource("CircleShape2D_x5sjm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w77cq")
+}
+autoplay = "Idle"
+
+[node name="1FiniteStateMachine" type="Node2D" parent="."]
+script = ExtResource("50_d1aeo")
+
+[node name="Idle" type="Node2D" parent="1FiniteStateMachine"]
+script = ExtResource("51_bdxfc")
+
+[node name="Follow" type="Node2D" parent="1FiniteStateMachine"]
+script = ExtResource("52_76gfd")
+
+[node name="MeleeAttack" type="Node2D" parent="1FiniteStateMachine"]
+script = ExtResource("53_o2ibq")
+
+[node name="TakeDamage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamage"]
+position = Vector2(36, 2)
+shape = SubResource("CircleShape2D_u3ntg")
+
+[node name="HealthBar" parent="." instance=ExtResource("56_8olxd")]
+offset_left = 31.25
+offset_top = -95.0
+offset_right = 71.25
+offset_bottom = -55.0
+scale = Vector2(3.5, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(36.25, 11.625)
+shape = SubResource("RectangleShape2D_8q078")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_63wsi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -37.5
+offset_top = -122.5
+offset_right = 104.5
+offset_bottom = -99.5
+theme_override_colors/font_color = Color(0.231373, 0.6, 0.768627, 1)
+theme_override_colors/font_shadow_color = Color(0.0644058, 0.150794, 0.533145, 1)
+theme_override_colors/font_outline_color = Color(0.160784, 0.101961, 0.423529, 1)
+theme_override_fonts/font = ExtResource("57_0eoe6")
+theme_override_font_sizes/font_size = 16
+text = "GRIMFROST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Attacking" to="." method="_on_attacking_area_entered"]
+[connection signal="area_entered" from="PlayerDetection" to="1FiniteStateMachine/Idle" method="_on_player_detection_area_entered"]
+[connection signal="area_entered" from="TakeDamage" to="." method="_on_take_damage_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

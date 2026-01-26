@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ijw4lyp8emc"]
+
+[ext_resource type="Script" path="res://Scripts/health_bar.gd" id="1_mac50"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mac50")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -2.0
+offset_right = 12.0
+offset_bottom = 2.0
+color = Color(1, 0, 0, 1)

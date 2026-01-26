@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4lgl5clohnj3"]
+
+[ext_resource type="Texture2D" uid="uid://dbgckeri3abco" path="res://Assests/Buttons/Random/Arrows/Big/03_Right.png" id="1_7qmo0"]
+[ext_resource type="Texture2D" uid="uid://c3w8chp8a2fq4" path="res://Assests/Buttons/Random/Arrows/Big/04_Right_Pressed.png" id="2_ejbjd"]
+
+[node name="TouchScreenButton4" type="TouchScreenButton"]
+z_index = 5
+position = Vector2(74.6667, 4.66666)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_7qmo0")
+texture_pressed = ExtResource("2_ejbjd")
+action = "right"

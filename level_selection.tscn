@@ -1,0 +1,308 @@
+[gd_scene load_steps=21 format=3 uid="uid://li6pnomxgj3d"]
+
+[ext_resource type="Texture2D" uid="uid://4eadbc17dxgm" path="res://Assests/Free/Menu/Levels/01.png" id="1_bf2a6"]
+[ext_resource type="Script" path="res://level_selection.gd" id="1_mal7e"]
+[ext_resource type="Texture2D" uid="uid://c4qmw4eoum27f" path="res://Assests/Free/Menu/Levels/02.png" id="2_f7s0b"]
+[ext_resource type="Texture2D" uid="uid://baqxhhkn25wy6" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/frost_guardian_free_192x128_SpriteSheet.png" id="2_ibkd4"]
+[ext_resource type="Texture2D" uid="uid://c258sbpl15pby" path="res://Assests/Knight/Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="2_sm4un"]
+[ext_resource type="Texture2D" uid="uid://c8sdvew40lf60" path="res://Assests/Free/Menu/Levels/50.png" id="3_di1hd"]
+[ext_resource type="Texture2D" uid="uid://24uqp2rl3slo" path="res://Assests/Knight/Frost_Guardian_FREE_v1.0/PNG files/1_atk/1_atk_6.png" id="3_oncg6"]
+[ext_resource type="Texture2D" uid="uid://cn58q3sm4tca0" path="res://Assests/Free/Menu/Levels/03.png" id="4_sckfj"]
+[ext_resource type="Texture2D" uid="uid://dsik06g2fvfq3" path="res://Assests/Knight/Necromancer_creativekind-Sheet.png" id="5_fxkcv"]
+[ext_resource type="Texture2D" uid="uid://1o1g80g61gj5" path="res://Assests/Free/Menu/Levels/05.png" id="5_wkl81"]
+[ext_resource type="Texture2D" uid="uid://dy1mjjsfra47g" path="res://Assests/Free/Menu/Levels/06.png" id="7_bttt8"]
+[ext_resource type="Texture2D" uid="uid://m778uavqrjam" path="res://Assests/Knight/WhatsApp Image 2024-07-18 at 10.02.26 PM.jpeg" id="7_hiyfd"]
+[ext_resource type="Texture2D" uid="uid://cryoc3bigdguu" path="res://Assests/Knight/Flying Demon 2D Pixel Art/Sprites/without_outline/ATTACK.png" id="7_omfnh"]
+[ext_resource type="Texture2D" uid="uid://b3kybo7ggirfy" path="res://Assests/Knight/Skeleton enemy/Skeleton enemy.png" id="8_hjgrw"]
+[ext_resource type="Texture2D" uid="uid://celp7pc5ftsdr" path="res://Assests/Magic-Cliffs-Gamekit/Sideview Sci-Fi - Patreon Collection/Sprites/mech-unit/sprites/mech-unit-export1.png" id="8_r30pi"]
+[ext_resource type="Texture2D" uid="uid://dc8rxbww43m04" path="res://Assests/Magic-Cliffs-Gamekit/Sideview Sci-Fi - Patreon Collection/Sprites/mech-unit/sprites/mech-unit-export5.png" id="9_osxjq"]
+[ext_resource type="FontFile" uid="uid://1ehb3qwjqnhm" path="res://Assests/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="17_mko77"]
+[ext_resource type="Texture2D" uid="uid://3gjdwsmaspkh" path="res://Assests/Buttons/Random/Options/Back.png" id="18_8dvjg"]
+[ext_resource type="Texture2D" uid="uid://c25k6e5mlmrkg" path="res://Assests/Buttons/Random/Options/Back_Pressed.png" id="19_ff057"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5dse"]
+
+[node name="LevelSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 540.0
+offset_top = 286.0
+offset_right = 632.0
+offset_bottom = 343.0
+scale = Vector2(2.14, 2.14)
+script = ExtResource("1_mal7e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -252.0
+offset_top = -158.0
+offset_right = 342.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="Blue guy Left2" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(73.9626, 177.159)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_ibkd4")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(408, 511, 132, 121)
+
+[node name="Wozard" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(376.767, 271.551)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_fxkcv")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(995, 267, 94, 113)
+
+[node name="Wozard2" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(125.365, 262.206)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_fxkcv")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1476, 413, 89, 86)
+
+[node name="Grey Guy right" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(181.44, 193.047)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_sm4un")
+region_enabled = true
+region_rect = Rect2(22, 709, 56, 69)
+
+[node name="tiny grey guy right" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(549.196, 274.822)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_hjgrw")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(323, 0, 56, 58)
+
+[node name="Black man right Center" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(429.57, 186.505)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_fxkcv")
+region_enabled = true
+region_rect = Rect2(1313, 276, 108, 109)
+
+[node name="Blue guy right" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(519.757, 178.093)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_oncg6")
+region_rect = Rect2(22, 709, 56, 69)
+
+[node name="Black guy LEFT" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(93.589, 50.5233)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_fxkcv")
+region_enabled = true
+region_rect = Rect2(1451, 240, 158, 157)
+
+[node name="Red wing left" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(167.421, 112.206)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("7_omfnh")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(553, 1, 81, 67)
+
+[node name="Yellow guy left" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(224.43, 270.149)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("8_r30pi")
+region_rect = Rect2(553, 1, 81, 67)
+
+[node name="Yellow guy right" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(469.29, 269.215)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("9_osxjq")
+flip_h = true
+region_rect = Rect2(151, 2, 80, 65)
+
+[node name="red wing right" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(498.729, 86.972)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("7_omfnh")
+region_enabled = true
+region_rect = Rect2(151, 2, 80, 65)
+
+[node name="grey small guy left" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(308.542, 274.822)
+texture = ExtResource("8_hjgrw")
+region_enabled = true
+region_rect = Rect2(4, 5, 51, 52)
+
+[node name="grey small guy left3" type="Sprite2D" parent="ColorRect"]
+z_index = 1
+position = Vector2(57.6075, 265.009)
+texture = ExtResource("8_hjgrw")
+region_enabled = true
+region_rect = Rect2(507, 0, 72, 57)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0.443137)
+layout_mode = 0
+offset_right = 3433.0
+offset_bottom = 1736.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_hiyfd")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.60748
+offset_top = -31.7757
+offset_right = 5.60748
+offset_bottom = -5.7757
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+columns = 3
+
+[node name="TouchScreenButton0" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(4, 4)
+texture_normal = ExtResource("1_bf2a6")
+
+[node name="TouchScreenButton1" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(35, 3.5)
+texture_normal = ExtResource("2_f7s0b")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(65.5, 3.5)
+texture_normal = ExtResource("4_sckfj")
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(4, 32.5)
+texture_normal = ExtResource("3_di1hd")
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(35, 32.5)
+texture_normal = ExtResource("5_wkl81")
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(66.5, 32)
+texture_normal = ExtResource("7_bttt8")
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="GridContainer"]
+position = Vector2(4, 61.5)
+texture_normal = ExtResource("3_di1hd")
+
+[node name="Level0" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_bf2a6")
+
+[node name="Level1" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("2_f7s0b")
+
+[node name="Level2" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("4_sckfj")
+
+[node name="Level3" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_di1hd")
+
+[node name="Level4" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("5_wkl81")
+
+[node name="Level5" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("7_bttt8")
+
+[node name="Level6" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_di1hd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -39.2337
+offset_top = -108.0
+offset_right = 457.766
+offset_bottom = -63.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.336594, 0.588847, 0.340643, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("17_mko77")
+theme_override_font_sizes/font_size = 32
+text = "Knight Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 230.729
+offset_top = -100.196
+offset_right = 727.729
+offset_bottom = -27.1963
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_outline_color = Color(0.294641, 0.294641, 0.294641, 1)
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("17_mko77")
+theme_override_font_sizes/font_size = 32
+text = "BACK
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.1589
+offset_top = -60.5
+offset_right = 120.159
+offset_bottom = -37.5
+theme_override_fonts/font = ExtResource("17_mko77")
+theme_override_font_sizes/font_size = 16
+text = "LEVELS"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(288.318, -127.103)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("18_8dvjg")
+texture_pressed = ExtResource("19_ff057")
+shape = SubResource("RectangleShape2D_w5dse")
+passby_press = true
+action = "Back"
+
+[connection signal="pressed" from="GridContainer/TouchScreenButton0" to="." method="_on_touch_screen_button_0_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton1" to="." method="_on_touch_screen_button_1_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton3" to="." method="_on_touch_screen_button_3_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton4" to="." method="_on_touch_screen_button_4_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton5" to="." method="_on_touch_screen_button_5_pressed"]
+[connection signal="pressed" from="GridContainer/TouchScreenButton6" to="." method="_on_touch_screen_button_6_pressed"]
+[connection signal="pressed" from="GridContainer/Level0" to="." method="_on_level_0_pressed"]
+[connection signal="pressed" from="GridContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="GridContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="GridContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="GridContainer/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="GridContainer/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="GridContainer/Level6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
